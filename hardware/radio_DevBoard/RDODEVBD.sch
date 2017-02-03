@@ -242,7 +242,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 1550 2250 1450
 Wire Wire Line
-	2250 1450 3300 1450
+	2150 1450 3300 1450
 Wire Wire Line
 	3050 1650 3050 1450
 Connection ~ 3050 1450
@@ -436,7 +436,7 @@ GND
 Text GLabel 10100 1800 0    60   Input ~ 0
 SYSCLK
 Text GLabel 10100 2000 0    60   Input ~ 0
-SEL
+~SEL
 Text GLabel 10100 2200 0    60   Input ~ 0
 CLK
 Text GLabel 10100 2400 0    60   Input ~ 0
@@ -522,5 +522,8 @@ Wire Wire Line
 	9100 2100 9100 2300
 Connection ~ 9100 2300
 Text GLabel 8500 2300 0    60   Input ~ 0
+GND
+Connection ~ 2250 1450
+Text GLabel 2150 1450 0    60   Input ~ 0
 GND
 $EndSCHEMATC

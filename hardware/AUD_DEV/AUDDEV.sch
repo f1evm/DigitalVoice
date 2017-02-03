@@ -1,0 +1,628 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:AUDLBR
+LIBS:AUDDEV-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TLV320ADC3001 U?
+U 1 1 588784EE
+P 4900 1450
+F 0 "U?" H 4900 550 60  0000 C CNN
+F 1 "TLV320ADC3001" H 4900 2300 60  0000 C CNN
+F 2 "" H 4900 1450 60  0001 C CNN
+F 3 "" H 4900 1450 60  0001 C CNN
+	1    4900 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L PHONO J?
+U 1 1 58891F77
+P 1150 1250
+F 0 "J?" H 800 1450 60  0000 C CNN
+F 1 "MIC_IN" H 1150 1550 60  0000 C CNN
+F 2 "" H 1150 1250 60  0001 C CNN
+F 3 "" H 1150 1250 60  0001 C CNN
+	1    1150 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L PHONO J?
+U 1 1 58891FC3
+P 1250 3850
+F 0 "J?" H 900 4050 60  0000 C CNN
+F 1 "AUD_OUT" H 1250 4150 60  0000 C CNN
+F 2 "" H 1250 3850 60  0001 C CNN
+F 3 "" H 1250 3850 60  0001 C CNN
+	1    1250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 950  3950 950 
+Text GLabel 3950 950  0    60   Input ~ 0
+DVDD
+Wire Wire Line
+	3250 1950 4050 1950
+Wire Wire Line
+	2650 1750 4050 1750
+Text GLabel 2650 1750 0    60   Input ~ 0
+AVDD
+Text GLabel 3250 1950 0    60   Input ~ 0
+DVDD
+Wire Wire Line
+	3850 2150 4050 2150
+Text GLabel 3850 2150 0    60   Input ~ 0
+IOVDD
+Wire Wire Line
+	5700 950  5850 950 
+Wire Wire Line
+	5700 1150 5950 1150
+Wire Wire Line
+	5850 950  5850 1150
+Connection ~ 5850 1150
+Text GLabel 5950 1150 2    60   Input ~ 0
+GND
+NoConn ~ 4050 1550
+NoConn ~ 5700 1550
+Wire Wire Line
+	4050 1150 3950 1150
+Wire Wire Line
+	4050 1350 3950 1350
+Text GLabel 3950 1150 0    60   Input ~ 0
+SCL
+Text GLabel 3950 1350 0    60   Input ~ 0
+SDA
+Wire Wire Line
+	5700 1350 5800 1350
+Wire Wire Line
+	5700 1750 5800 1750
+Wire Wire Line
+	5700 1950 5800 1950
+Wire Wire Line
+	5700 2150 5800 2150
+Wire Wire Line
+	5700 750  5800 750 
+Text GLabel 5800 750  2    60   Input ~ 0
+MICOUT
+Wire Wire Line
+	4050 750  3950 750 
+Text GLabel 3950 750  0    60   Input ~ 0
+MICBIAS
+Text GLabel 5800 1350 2    60   Input ~ 0
+MCLK
+Text GLabel 5800 1750 2    60   Input ~ 0
+DOUT
+Text GLabel 5800 1950 2    60   Input ~ 0
+WCLK
+Text GLabel 5800 2150 2    60   Input ~ 0
+BCLK
+$Comp
+L CP1 C?
+U 1 1 588926D3
+P 10500 1050
+F 0 "C?" H 10525 1150 50  0000 L CNN
+F 1 "10uF" H 10525 950 50  0000 L CNN
+F 2 "" H 10500 1050 50  0000 C CNN
+F 3 "" H 10500 1050 50  0000 C CNN
+	1    10500 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 58892739
+P 9600 1050
+F 0 "C?" H 9625 1150 50  0000 L CNN
+F 1 "10uF" H 9625 950 50  0000 L CNN
+F 2 "" H 9600 1050 50  0000 C CNN
+F 3 "" H 9600 1050 50  0000 C CNN
+	1    9600 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR_SMALL L?
+U 1 1 58892769
+P 10050 700
+F 0 "L?" H 10050 800 50  0000 C CNN
+F 1 "100nH" H 10050 650 50  0000 C CNN
+F 2 "" H 10050 700 50  0000 C CNN
+F 3 "" H 10050 700 50  0000 C CNN
+	1    10050 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10700 700  10300 700 
+Wire Wire Line
+	10500 900  10500 700 
+Connection ~ 10500 700 
+Wire Wire Line
+	9400 700  9800 700 
+Wire Wire Line
+	9600 700  9600 900 
+Text GLabel 10700 700  2    60   Input ~ 0
+POWER_IN
+Wire Wire Line
+	9600 1200 9600 1400
+Wire Wire Line
+	7800 1400 10700 1400
+Wire Wire Line
+	10500 1200 10500 1400
+Connection ~ 10500 1400
+Text GLabel 10700 1400 2    60   Input ~ 0
+GND
+$Comp
+L INDUCTOR_SMALL L?
+U 1 1 58892915
+P 9150 700
+F 0 "L?" H 9150 800 50  0000 C CNN
+F 1 "50nH" H 9150 650 50  0000 C CNN
+F 2 "" H 9150 700 50  0000 C CNN
+F 3 "" H 9150 700 50  0000 C CNN
+	1    9150 700 
+	1    0    0    -1  
+$EndComp
+Connection ~ 9600 700 
+$Comp
+L C C?
+U 1 1 58892971
+P 8700 1050
+F 0 "C?" H 8725 1150 50  0000 L CNN
+F 1 "1uF" H 8725 950 50  0000 L CNN
+F 2 "" H 8738 900 50  0000 C CNN
+F 3 "" H 8700 1050 50  0000 C CNN
+	1    8700 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 700  8900 700 
+Wire Wire Line
+	8700 700  8700 900 
+Wire Wire Line
+	8700 1200 8700 1400
+Connection ~ 9600 1400
+$Comp
+L C C?
+U 1 1 58892ABC
+P 8350 1050
+F 0 "C?" H 8375 1150 50  0000 L CNN
+F 1 "100pF" H 8375 950 50  0000 L CNN
+F 2 "" H 8388 900 50  0000 C CNN
+F 3 "" H 8350 1050 50  0000 C CNN
+	1    8350 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 700  8350 900 
+Connection ~ 8700 700 
+Wire Wire Line
+	8350 1200 8350 1400
+Connection ~ 8700 1400
+$Comp
+L C C?
+U 1 1 58892B96
+P 8000 1050
+F 0 "C?" H 8025 1150 50  0000 L CNN
+F 1 "100nF" H 8025 950 50  0000 L CNN
+F 2 "" H 8038 900 50  0000 C CNN
+F 3 "" H 8000 1050 50  0000 C CNN
+	1    8000 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 700  8000 900 
+Connection ~ 8350 700 
+Wire Wire Line
+	8000 1200 8000 1400
+Connection ~ 8350 1400
+Connection ~ 8000 700 
+Connection ~ 8000 1400
+Text GLabel 7800 1400 0    60   Input ~ 0
+GND
+Text GLabel 7800 700  0    60   Input ~ 0
+AVDD
+$Comp
+L CP1 C?
+U 1 1 58892F89
+P 10450 2000
+F 0 "C?" H 10475 2100 50  0000 L CNN
+F 1 "10uF" H 10475 1900 50  0000 L CNN
+F 2 "" H 10450 2000 50  0000 C CNN
+F 3 "" H 10450 2000 50  0000 C CNN
+	1    10450 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 58892F8F
+P 9550 2000
+F 0 "C?" H 9575 2100 50  0000 L CNN
+F 1 "10uF" H 9575 1900 50  0000 L CNN
+F 2 "" H 9550 2000 50  0000 C CNN
+F 3 "" H 9550 2000 50  0000 C CNN
+	1    9550 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR_SMALL L?
+U 1 1 58892F95
+P 10000 1650
+F 0 "L?" H 10000 1750 50  0000 C CNN
+F 1 "100nH" H 10000 1600 50  0000 C CNN
+F 2 "" H 10000 1650 50  0000 C CNN
+F 3 "" H 10000 1650 50  0000 C CNN
+	1    10000 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 1650 10250 1650
+Wire Wire Line
+	10450 1850 10450 1650
+Connection ~ 10450 1650
+Wire Wire Line
+	9350 1650 9750 1650
+Wire Wire Line
+	9550 1650 9550 1850
+Text GLabel 10650 1650 2    60   Input ~ 0
+POWER_IN
+Wire Wire Line
+	9550 2150 9550 2350
+Wire Wire Line
+	7750 2350 10650 2350
+Wire Wire Line
+	10450 2150 10450 2350
+Connection ~ 10450 2350
+Text GLabel 10650 2350 2    60   Input ~ 0
+GND
+$Comp
+L INDUCTOR_SMALL L?
+U 1 1 58892FA6
+P 9100 1650
+F 0 "L?" H 9100 1750 50  0000 C CNN
+F 1 "50nH" H 9100 1600 50  0000 C CNN
+F 2 "" H 9100 1650 50  0000 C CNN
+F 3 "" H 9100 1650 50  0000 C CNN
+	1    9100 1650
+	1    0    0    -1  
+$EndComp
+Connection ~ 9550 1650
+$Comp
+L C C?
+U 1 1 58892FAD
+P 8650 2000
+F 0 "C?" H 8675 2100 50  0000 L CNN
+F 1 "1uF" H 8675 1900 50  0000 L CNN
+F 2 "" H 8688 1850 50  0000 C CNN
+F 3 "" H 8650 2000 50  0000 C CNN
+	1    8650 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 1650 8850 1650
+Wire Wire Line
+	8650 1650 8650 1850
+Wire Wire Line
+	8650 2150 8650 2350
+Connection ~ 9550 2350
+$Comp
+L C C?
+U 1 1 58892FB7
+P 8300 2000
+F 0 "C?" H 8325 2100 50  0000 L CNN
+F 1 "100pF" H 8325 1900 50  0000 L CNN
+F 2 "" H 8338 1850 50  0000 C CNN
+F 3 "" H 8300 2000 50  0000 C CNN
+	1    8300 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 1650 8300 1850
+Connection ~ 8650 1650
+Wire Wire Line
+	8300 2150 8300 2350
+Connection ~ 8650 2350
+$Comp
+L C C?
+U 1 1 58892FC1
+P 7950 2000
+F 0 "C?" H 7975 2100 50  0000 L CNN
+F 1 "100nF" H 7975 1900 50  0000 L CNN
+F 2 "" H 7988 1850 50  0000 C CNN
+F 3 "" H 7950 2000 50  0000 C CNN
+	1    7950 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 1650 7950 1850
+Connection ~ 8300 1650
+Wire Wire Line
+	7950 2150 7950 2350
+Connection ~ 8300 2350
+Connection ~ 7950 1650
+Connection ~ 7950 2350
+Text GLabel 7750 2350 0    60   Input ~ 0
+GND
+Text GLabel 7750 1650 0    60   Input ~ 0
+DVDD
+$Comp
+L LP5910 U?
+U 1 1 58893B7C
+P 9200 3000
+F 0 "U?" H 9200 2750 60  0000 C CNN
+F 1 "LP5910" H 9200 3250 60  0000 C CNN
+F 2 "" H 9200 3000 60  0001 C CNN
+F 3 "" H 9200 3000 60  0001 C CNN
+	1    9200 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 2850 10300 2850
+Wire Wire Line
+	9650 3150 9800 3150
+$Comp
+L C C?
+U 1 1 58893CE3
+P 10100 3000
+F 0 "C?" H 10125 3100 50  0000 L CNN
+F 1 "1uF" H 10125 2900 50  0000 L CNN
+F 2 "" H 10138 2850 50  0000 C CNN
+F 3 "" H 10100 3000 50  0000 C CNN
+	1    10100 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 3000 9900 3000
+Wire Wire Line
+	9900 3000 9900 3150
+Wire Wire Line
+	9900 3150 10300 3150
+Connection ~ 10100 3150
+Connection ~ 10100 2850
+Text GLabel 10300 2850 2    60   Input ~ 0
+DVDD
+Text GLabel 10300 3150 2    60   Input ~ 0
+GND
+Connection ~ 10200 2850
+Wire Wire Line
+	10200 2850 10200 2750
+Wire Wire Line
+	10200 2750 9800 2750
+Wire Wire Line
+	9800 2750 9800 3150
+Wire Wire Line
+	8150 2850 8800 2850
+$Comp
+L C C?
+U 1 1 5889415C
+P 8600 3000
+F 0 "C?" H 8625 3100 50  0000 L CNN
+F 1 "1uF" H 8625 2900 50  0000 L CNN
+F 2 "" H 8638 2850 50  0000 C CNN
+F 3 "" H 8600 3000 50  0000 C CNN
+	1    8600 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 588941FA
+P 8350 3000
+F 0 "C?" H 8375 3100 50  0000 L CNN
+F 1 "0.1uF" H 8375 2900 50  0000 L CNN
+F 2 "" H 8388 2850 50  0000 C CNN
+F 3 "" H 8350 3000 50  0000 C CNN
+	1    8350 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3150 8600 3150
+Connection ~ 8350 3150
+Connection ~ 8350 2850
+Text GLabel 8150 3150 0    60   Input ~ 0
+GND
+Text GLabel 8150 2850 0    60   Input ~ 0
+IOVDD
+$Comp
+L C C?
+U 1 1 588946AF
+P 3950 2400
+F 0 "C?" H 3975 2500 50  0000 L CNN
+F 1 "0.1uF" H 3975 2300 50  0000 L CNN
+F 2 "" H 3988 2250 50  0000 C CNN
+F 3 "" H 3950 2400 50  0000 C CNN
+	1    3950 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 2150 3950 2250
+Connection ~ 3950 2150
+Wire Wire Line
+	3950 2650 3950 2550
+Wire Wire Line
+	2650 2650 3950 2650
+$Comp
+L C C?
+U 1 1 588948C3
+P 3350 2300
+F 0 "C?" H 3375 2400 50  0000 L CNN
+F 1 "0.1uF" H 3375 2200 50  0000 L CNN
+F 2 "" H 3388 2150 50  0000 C CNN
+F 3 "" H 3350 2300 50  0000 C CNN
+	1    3350 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2150 3350 1950
+Connection ~ 3350 1950
+Wire Wire Line
+	3350 2450 3350 2650
+Connection ~ 3350 2650
+$Comp
+L C C?
+U 1 1 588949EA
+P 2750 2150
+F 0 "C?" H 2775 2250 50  0000 L CNN
+F 1 "0.1uF" H 2775 2050 50  0000 L CNN
+F 2 "" H 2788 2000 50  0000 C CNN
+F 3 "" H 2750 2150 50  0000 C CNN
+	1    2750 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 1750 2750 2000
+Wire Wire Line
+	2750 2650 2750 2300
+Connection ~ 2750 1750
+Connection ~ 2750 2650
+Text GLabel 2650 2650 0    60   Input ~ 0
+GND
+$Comp
+L C C?
+U 1 1 58894DDE
+P 1600 1450
+F 0 "C?" H 1625 1550 50  0000 L CNN
+F 1 "C" H 1625 1350 50  0000 L CNN
+F 2 "" H 1638 1300 50  0000 C CNN
+F 3 "" H 1600 1450 50  0000 C CNN
+	1    1600 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58894E29
+P 1950 1100
+F 0 "C?" H 1975 1200 50  0000 L CNN
+F 1 "1uF" H 1975 1000 50  0000 L CNN
+F 2 "" H 1988 950 50  0000 C CNN
+F 3 "" H 1950 1100 50  0000 C CNN
+	1    1950 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58894E7E
+P 1950 800
+F 0 "R?" V 2030 800 50  0000 C CNN
+F 1 "R" V 1950 800 50  0000 C CNN
+F 2 "" V 1880 800 50  0000 C CNN
+F 3 "" H 1950 800 50  0000 C CNN
+	1    1950 800 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 800  1600 800 
+Wire Wire Line
+	1600 800  1600 1300
+Connection ~ 1600 1100
+Wire Wire Line
+	1800 1100 1600 1100
+Wire Wire Line
+	2100 800  2300 800 
+Wire Wire Line
+	2100 1100 2300 1100
+Wire Wire Line
+	1150 1600 1800 1600
+Connection ~ 1600 1600
+Text GLabel 1800 1600 2    60   Input ~ 0
+GND
+Text GLabel 2300 800  2    60   Input ~ 0
+MICBIAS
+Text GLabel 2300 1100 2    60   Input ~ 0
+MICOUT
+$Comp
+L CONN_01X08 P?
+U 1 1 58895537
+P 11100 4700
+F 0 "P?" H 11100 5150 50  0000 C CNN
+F 1 "ADCCON" V 11200 4700 50  0000 C CNN
+F 2 "" H 11100 4700 50  0000 C CNN
+F 3 "" H 11100 4700 50  0000 C CNN
+	1    11100 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10900 5050 10700 5050
+Wire Wire Line
+	10900 4950 10700 4950
+Wire Wire Line
+	10900 4850 10700 4850
+Wire Wire Line
+	10900 4750 10700 4750
+Wire Wire Line
+	10900 4650 10700 4650
+Wire Wire Line
+	10900 4550 10700 4550
+Wire Wire Line
+	10900 4450 10700 4450
+Wire Wire Line
+	10900 4350 10700 4350
+Text GLabel 10700 5050 0    60   Input ~ 0
+GND
+Text GLabel 10700 4350 0    55   Input ~ 0
+VDD
+Text GLabel 10700 4450 0    55   Input ~ 0
+SCL
+Text GLabel 10700 4550 0    55   Input ~ 0
+SDA
+Text GLabel 10700 4650 0    55   Input ~ 0
+DOUT
+Text GLabel 10700 4750 0    55   Input ~ 0
+BCLK
+Text GLabel 10700 4850 0    55   Input ~ 0
+WCLK
+Text GLabel 10700 4950 0    55   Input ~ 0
+MCLK
+$Sheet
+S 5350 2900 950  800 
+U 588A773E
+F0 "TLVDAC" 60
+F1 "TLVDAC.sch" 60
+$EndSheet
+Wire Wire Line
+	1250 4200 1250 4400
+Wire Wire Line
+	1250 4400 1450 4400
+Wire Wire Line
+	1700 3700 1900 3700
+Text GLabel 1900 3700 2    60   Input ~ 0
+HPOUT
+Text GLabel 1450 4400 2    60   Input ~ 0
+GND
+$EndSCHEMATC

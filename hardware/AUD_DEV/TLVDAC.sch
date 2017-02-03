@@ -1,0 +1,397 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:AUDLBR
+LIBS:AUDDEV-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TLV320DAC3100 U?
+U 1 1 588A7810
+P 5500 3300
+F 0 "U?" H 5500 2450 60  0000 C CNN
+F 1 "TLV320DAC3100" H 5500 4150 60  0000 C CNN
+F 2 "" H 5500 3050 60  0001 C CNN
+F 3 "" H 5500 3050 60  0001 C CNN
+	1    5500 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3950 6200 3950
+Text GLabel 6200 3950 2    60   Input ~ 0
+DVDD
+Wire Wire Line
+	4900 2550 4800 2550
+Text GLabel 4800 2550 0    60   Input ~ 0
+GND
+Wire Wire Line
+	4900 2650 4450 2650
+Text GLabel 3850 2150 0    60   Input ~ 0
+IOVDD
+Wire Wire Line
+	3600 2750 4900 2750
+Text GLabel 3600 2750 0    60   Input ~ 0
+DVDD
+NoConn ~ 4900 2850
+NoConn ~ 4900 3950
+Wire Wire Line
+	6100 2550 6200 2550
+Text GLabel 6200 2550 2    60   Input ~ 0
+AVDD
+Wire Wire Line
+	6100 2650 6600 2650
+Wire Wire Line
+	6100 2850 6600 2850
+Wire Wire Line
+	6100 2950 6200 2950
+Wire Wire Line
+	6100 3250 6600 3250
+Wire Wire Line
+	6100 3350 6200 3350
+Wire Wire Line
+	6100 3550 7050 3550
+Wire Wire Line
+	6100 3650 6600 3650
+Wire Wire Line
+	6100 3750 6200 3750
+Wire Wire Line
+	6100 3850 7050 3850
+Wire Wire Line
+	4900 2950 4800 2950
+Wire Wire Line
+	4900 3050 4450 3050
+Wire Wire Line
+	4900 3150 4800 3150
+Wire Wire Line
+	4900 3250 4450 3250
+Wire Wire Line
+	4900 3350 4800 3350
+Wire Wire Line
+	4900 3450 4450 3450
+Wire Wire Line
+	4900 4050 4800 4050
+Text GLabel 6600 2650 2    60   Input ~ 0
+GND
+Text GLabel 6200 3350 2    60   Input ~ 0
+GND
+Text GLabel 6200 3750 2    60   Input ~ 0
+GND
+Text GLabel 4800 4050 0    60   Input ~ 0
+GND
+Text GLabel 4800 2950 0    60   Input ~ 0
+DIN
+Text GLabel 4450 3050 0    60   Input ~ 0
+WCLK
+Text GLabel 4800 3150 0    60   Input ~ 0
+BCLK
+Text GLabel 4450 3250 0    60   Input ~ 0
+MCLK
+Text GLabel 4800 3350 0    60   Input ~ 0
+SDA
+Text GLabel 4450 3450 0    60   Input ~ 0
+SCL
+Text GLabel 6200 2950 2    60   Input ~ 0
+SPKVDD
+Text GLabel 6600 2850 2    60   Input ~ 0
+GND
+Text GLabel 6600 3250 2    60   Input ~ 0
+SPKVDD
+Text GLabel 6600 3650 2    60   Input ~ 0
+HPVDD
+NoConn ~ 6100 4050
+$Comp
+L C C?
+U 1 1 5894E823
+P 7200 3550
+F 0 "C?" H 7225 3650 50  0000 L CNN
+F 1 "1uF" H 7225 3450 50  0000 L CNN
+F 2 "" H 7238 3400 50  0000 C CNN
+F 3 "" H 7200 3550 50  0000 C CNN
+	1    7200 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 5894E844
+P 7200 3850
+F 0 "C?" H 7225 3950 50  0000 L CNN
+F 1 "1uF" H 7225 3750 50  0000 L CNN
+F 2 "" H 7238 3700 50  0000 C CNN
+F 3 "" H 7200 3850 50  0000 C CNN
+	1    7200 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7350 3550 7450 3550
+Wire Wire Line
+	7450 3550 7450 3850
+Wire Wire Line
+	7450 3850 7350 3850
+Wire Wire Line
+	7450 3700 7550 3700
+Connection ~ 7450 3700
+Text GLabel 7550 3700 2    60   Input ~ 0
+HPOUT
+Wire Wire Line
+	4900 3550 4800 3550
+Text GLabel 4800 3550 0    60   Input ~ 0
+HPOUT
+Wire Wire Line
+	4900 3650 4050 3650
+$Comp
+L R R?
+U 1 1 5894E994
+P 3900 3650
+F 0 "R?" V 3980 3650 50  0000 C CNN
+F 1 "25k" V 3900 3650 50  0000 C CNN
+F 2 "" V 3830 3650 50  0000 C CNN
+F 3 "" H 3900 3650 50  0000 C CNN
+	1    3900 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 3650 3650 3650
+Text GLabel 3650 3650 0    60   Input ~ 0
+HPOUT
+NoConn ~ 4900 3750
+NoConn ~ 4900 3850
+NoConn ~ 6100 2750
+NoConn ~ 6100 3050
+NoConn ~ 6100 3150
+NoConn ~ 6100 3450
+$Comp
+L CP1 C?
+U 1 1 5894EA90
+P 10000 3050
+F 0 "C?" H 10025 3150 50  0000 L CNN
+F 1 "10uF" H 10025 2950 50  0000 L CNN
+F 2 "" H 10000 3050 50  0000 C CNN
+F 3 "" H 10000 3050 50  0000 C CNN
+	1    10000 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5894EAD7
+P 9600 3050
+F 0 "C?" H 9625 3150 50  0000 L CNN
+F 1 "1uF" H 9625 2950 50  0000 L CNN
+F 2 "" H 9638 2900 50  0000 C CNN
+F 3 "" H 9600 3050 50  0000 C CNN
+	1    9600 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 2800 10000 2900
+Wire Wire Line
+	9600 2900 9600 2800
+Wire Wire Line
+	9500 2800 10100 2800
+Connection ~ 9600 2800
+Wire Wire Line
+	9600 3200 9600 3300
+Wire Wire Line
+	9500 3300 10700 3300
+Wire Wire Line
+	10000 3300 10000 3200
+Connection ~ 9600 3300
+Connection ~ 10000 2800
+$Comp
+L INDUCTOR_SMALL L?
+U 1 1 5894EC33
+P 10350 2800
+F 0 "L?" H 10350 2900 50  0000 C CNN
+F 1 "50nH" H 10350 2750 50  0000 C CNN
+F 2 "" H 10350 2800 50  0000 C CNN
+F 3 "" H 10350 2800 50  0000 C CNN
+	1    10350 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 2800 10700 2800
+Connection ~ 10000 3300
+Text GLabel 10700 2800 2    60   Input ~ 0
+AVDD
+Text GLabel 10700 3300 2    60   Input ~ 0
+GND
+Text GLabel 9500 3300 0    60   Input ~ 0
+GND
+Text GLabel 9500 2800 0    60   Input ~ 0
+SPKVDD
+$Comp
+L CP1 C?
+U 1 1 5894EDFF
+P 10000 2250
+F 0 "C?" H 10025 2350 50  0000 L CNN
+F 1 "10uF" H 10025 2150 50  0000 L CNN
+F 2 "" H 10000 2250 50  0000 C CNN
+F 3 "" H 10000 2250 50  0000 C CNN
+	1    10000 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5894EE05
+P 9600 2250
+F 0 "C?" H 9625 2350 50  0000 L CNN
+F 1 "1uF" H 9625 2150 50  0000 L CNN
+F 2 "" H 9638 2100 50  0000 C CNN
+F 3 "" H 9600 2250 50  0000 C CNN
+	1    9600 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 2000 10000 2100
+Wire Wire Line
+	9600 2100 9600 2000
+Wire Wire Line
+	9500 2000 10100 2000
+Connection ~ 9600 2000
+Wire Wire Line
+	9600 2400 9600 2500
+Wire Wire Line
+	9500 2500 10700 2500
+Wire Wire Line
+	10000 2500 10000 2400
+Connection ~ 9600 2500
+Connection ~ 10000 2000
+$Comp
+L INDUCTOR_SMALL L?
+U 1 1 5894EE14
+P 10350 2000
+F 0 "L?" H 10350 2100 50  0000 C CNN
+F 1 "50nH" H 10350 1950 50  0000 C CNN
+F 2 "" H 10350 2000 50  0000 C CNN
+F 3 "" H 10350 2000 50  0000 C CNN
+	1    10350 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 2000 10700 2000
+Connection ~ 10000 2500
+Text GLabel 10700 2000 2    60   Input ~ 0
+AVDD
+Text GLabel 10700 2500 2    60   Input ~ 0
+GND
+Text GLabel 9500 2500 0    60   Input ~ 0
+GND
+Text GLabel 9500 2000 0    60   Input ~ 0
+HPVDD
+$Comp
+L C C?
+U 1 1 5894F042
+P 4000 3000
+F 0 "C?" H 4025 3100 50  0000 L CNN
+F 1 "0.1uF" H 3900 2850 50  0000 L CNN
+F 2 "" H 4038 2850 50  0000 C CNN
+F 3 "" H 4000 3000 50  0000 C CNN
+	1    4000 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2850 4000 2750
+Connection ~ 4000 2750
+Wire Wire Line
+	4000 3250 4000 3150
+Wire Wire Line
+	3600 3250 4000 3250
+Text GLabel 3600 3250 0    60   Input ~ 0
+GND
+Wire Wire Line
+	4450 2650 4450 2150
+Wire Wire Line
+	4450 2150 3850 2150
+$Comp
+L C C?
+U 1 1 5894F2BC
+P 4250 2400
+F 0 "C?" H 4275 2500 50  0000 L CNN
+F 1 "0.1uF" H 4275 2300 50  0000 L CNN
+F 2 "" H 4288 2250 50  0000 C CNN
+F 3 "" H 4250 2400 50  0000 C CNN
+	1    4250 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2150 4250 2250
+Connection ~ 4250 2150
+Wire Wire Line
+	4250 2650 4250 2550
+Wire Wire Line
+	3850 2650 4250 2650
+Text GLabel 3850 2650 0    60   Input ~ 0
+GND
+$Comp
+L C C?
+U 1 1 5894F598
+P 3700 3000
+F 0 "C?" H 3725 3100 50  0000 L CNN
+F 1 "1uF" H 3725 2900 50  0000 L CNN
+F 2 "" H 3738 2850 50  0000 C CNN
+F 3 "" H 3700 3000 50  0000 C CNN
+	1    3700 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 3250 3700 3150
+Wire Wire Line
+	3700 2750 3700 2850
+Connection ~ 3700 2750
+Connection ~ 3700 3250
+Wire Wire Line
+	3950 2650 3950 2550
+Wire Wire Line
+	3950 2150 3950 2250
+$Comp
+L C C?
+U 1 1 5894F8ED
+P 3950 2400
+F 0 "C?" H 3975 2500 50  0000 L CNN
+F 1 "1uF" H 3975 2300 50  0000 L CNN
+F 2 "" H 3988 2250 50  0000 C CNN
+F 3 "" H 3950 2400 50  0000 C CNN
+	1    3950 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 3950 2150
+Connection ~ 3950 2650
+$EndSCHEMATC
