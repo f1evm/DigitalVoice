@@ -1,4 +1,4 @@
-update=2/9/2017 3:03:01 PM
+update=2/14/2017 7:43:01 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,3 +62,4 @@ LibName30=valves
 LibName31=RDOLBR
 LibName32=C:/Users/Kyle/Documents/GitHub/DigitalVoice/hardware/AUD_DEV/AUDLBR/MCP73833T
 LibName33=C:/Users/Kyle/Documents/GitHub/DigitalVoice/hardware/AUD_DEV/AUDLBR/PWR_IN_0.1
+LibName34=C:/Users/Kyle/Documents/GitHub/DigitalVoice/hardware/AUD_DEV/AUDLBR/mp45dt02
