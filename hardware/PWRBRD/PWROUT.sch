@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:PWR
+LIBS:PWRBRD-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -723,4 +724,41 @@ Text GLabel 1550 5450 0    60   Input ~ 0
 3V3
 Text GLabel 3150 5450 2    60   Input ~ 0
 3V3_FILT
+Wire Wire Line
+	10250 1100 10150 1100
+Wire Wire Line
+	10150 1100 10150 1000
+Wire Wire Line
+	10150 1000 10050 1000
+Wire Wire Line
+	10250 1200 10050 1200
+Wire Wire Line
+	10250 1300 10150 1300
+Wire Wire Line
+	10150 1300 10150 1400
+Wire Wire Line
+	10150 1400 10050 1400
+Text GLabel 10050 1000 0    60   Input ~ 0
+5V_FILT
+Text GLabel 10050 1200 0    60   Input ~ 0
+3V3_FILT
+Text GLabel 10050 1400 0    60   Input ~ 0
+16V_FILT
+$Comp
+L CONN_01X04 P3
+U 1 1 58B0BFC1
+P 10450 1250
+F 0 "P3" H 10450 1500 50  0000 C CNN
+F 1 "CONN_01X04" V 10550 1250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 10450 1250 50  0001 C CNN
+F 3 "" H 10450 1250 50  0000 C CNN
+	1    10450 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 1400 10250 1600
+Wire Wire Line
+	10250 1600 10050 1600
+Text GLabel 10050 1600 0    60   Input ~ 0
+GND
 $EndSCHEMATC
