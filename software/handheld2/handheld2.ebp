@@ -215,6 +215,73 @@
 		<Unit filename="SPL\src\stm32f4xx_wwdg.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\codec2\codebook.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\codebookd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\codebookge.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\codebookjvm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\codec2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\codec2.h" />
+		<Unit filename="src\codec2\dump.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\dump.h" />
+		<Unit filename="src\codec2\fdmdv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\freedv_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\freedv_api.h" />
+		<Unit filename="src\codec2\golay23.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\golay23.h" />
+		<Unit filename="src\codec2\interp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\interp.h" />
+		<Unit filename="src\codec2\kiss_fft.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\kiss_fft.h" />
+		<Unit filename="src\codec2\lpc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\lpc.h" />
+		<Unit filename="src\codec2\lsp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\lsp.h" />
+		<Unit filename="src\codec2\nlp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\nlp.h" />
+		<Unit filename="src\codec2\phase.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\phase.h" />
+		<Unit filename="src\codec2\postfilter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\postfilter.h" />
+		<Unit filename="src\codec2\sine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\sine.h" />
+		<Unit filename="src\codec2\varicode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\varicode.h" />
 		<Unit filename="src\main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -238,7 +305,7 @@
 			</DoxyBlocks>
 			<code_completion />
 			<debugger>
-				<target_debugging_settings target="Release" active_interface="ST-link">
+				<target_debugging_settings target="Debug" active_interface="ST-link">
 					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics" gdb_before_conn="" gdb_after_conn="">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
@@ -255,7 +322,7 @@
 						</family_options>
 					</debug_interface>
 				</target_debugging_settings>
-				<target_debugging_settings target="Debug" active_interface="ST-link">
+				<target_debugging_settings target="Release" active_interface="ST-link">
 					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics" gdb_before_conn="" gdb_after_conn="">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
