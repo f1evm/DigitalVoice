@@ -14,24 +14,26 @@
 				<Option compiler="armgcc_eb" />
 				<Option projectDeviceOptionsRelation="0" />
 				<Compiler>
-					<Add option="-g3" />
-					<Add option="-O0" />
 					<Add option="-Wall" />
 					<Add option="-fdata-sections" />
 					<Add option="-ffunction-sections" />
+					<Add option="-O0" />
+					<Add option="-g3" />
+					<Add symbol="CORTEX_M4" />
 				</Compiler>
 				<Cpp>
-					<Add option="-g3" />
-					<Add option="-O0" />
 					<Add option="-Wall" />
 					<Add option="-fdata-sections" />
 					<Add option="-ffunction-sections" />
+					<Add option="-O0" />
+					<Add option="-g3" />
 				</Cpp>
 				<Assembler>
 					<Add option="-Wa,--gdwarf-2" />
 				</Assembler>
 				<Linker>
 					<Add option="-Wl,--gc-sections" />
+					<Add library="m" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -92,6 +94,23 @@
 		<Unit filename="cmsis\core_cm4_simd.h" />
 		<Unit filename="cmsis\core_cmFunc.h" />
 		<Unit filename="cmsis\core_cmInstr.h" />
+		<Unit filename="inc\sm1000\debugblinky.h" />
+		<Unit filename="inc\sm1000\gdb_stdio.h" />
+		<Unit filename="inc\sm1000\iir_duc.h" />
+		<Unit filename="inc\sm1000\iir_tuner.h" />
+		<Unit filename="inc\sm1000\menu.h" />
+		<Unit filename="inc\sm1000\morse.h" />
+		<Unit filename="inc\sm1000\sfx.h" />
+		<Unit filename="inc\sm1000\sine.h" />
+		<Unit filename="inc\sm1000\sm1000_leds_switches.h" />
+		<Unit filename="inc\sm1000\sounds.h" />
+		<Unit filename="inc\sm1000\stm32f4_adc.h" />
+		<Unit filename="inc\sm1000\stm32f4_adc_tuner.h" />
+		<Unit filename="inc\sm1000\stm32f4_dac.h" />
+		<Unit filename="inc\sm1000\stm32f4_dacduc.h" />
+		<Unit filename="inc\sm1000\stm32f4_usb_vcp.h" />
+		<Unit filename="inc\sm1000\stm32f4xx_conf.h" />
+		<Unit filename="inc\sm1000\tone.h" />
 		<Unit filename="inc\stm32f4xx.h" />
 		<Unit filename="inc\stm32f4xx_conf.h" />
 		<Unit filename="inc\system_stm32f4xx.h" />
@@ -215,22 +234,57 @@
 		<Unit filename="SPL\src\stm32f4xx_wwdg.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\codec2\_kiss_fft_guts.h" />
+		<Unit filename="src\codec2\ampexp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\ampexp.h" />
+		<Unit filename="src\codec2\bpf.h" />
+		<Unit filename="src\codec2\bpfb.h" />
 		<Unit filename="src\codec2\codebook.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\codec2\codebookd.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\codec2\codebookdt.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\codec2\codebookge.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\codec2\codebookjnd.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\codec2\codebookjvm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\codebookres.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\codebookvq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\codebookvqanssi.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\codec2\codec2.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\codec2\codec2.h" />
+		<Unit filename="src\codec2\codec2_cohpsk.h" />
+		<Unit filename="src\codec2\codec2_fdmdv.h" />
+		<Unit filename="src\codec2\codec2_fifo.h" />
+		<Unit filename="src\codec2\codec2_fm.h" />
+		<Unit filename="src\codec2\codec2_internal.h" />
+		<Unit filename="src\codec2\cohpsk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\cohpsk_defs.h" />
+		<Unit filename="src\codec2\cohpsk_internal.h" />
+		<Unit filename="src\codec2\comp.h" />
+		<Unit filename="src\codec2\comp_prim.h" />
+		<Unit filename="src\codec2\defines.h" />
 		<Unit filename="src\codec2\dump.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -238,14 +292,27 @@
 		<Unit filename="src\codec2\fdmdv.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\codec2\fdmdv_internal.h" />
+		<Unit filename="src\codec2\fifo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\fm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\fm_fir_coeff.h" />
 		<Unit filename="src\codec2\freedv_api.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\codec2\freedv_api.h" />
+		<Unit filename="src\codec2\freedv_api_internal.h" />
 		<Unit filename="src\codec2\golay23.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\codec2\golay23.h" />
+		<Unit filename="src\codec2\golaydectable.h" />
+		<Unit filename="src\codec2\golayenctable.h" />
+		<Unit filename="src\codec2\hanning.h" />
+		<Unit filename="src\codec2\ht_coeff.h" />
 		<Unit filename="src\codec2\interp.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -254,6 +321,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\codec2\kiss_fft.h" />
+		<Unit filename="src\codec2\linreg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\linreg.h" />
 		<Unit filename="src\codec2\lpc.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -262,27 +333,103 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\codec2\lsp.h" />
+		<Unit filename="src\codec2\machdep.h" />
+		<Unit filename="src\codec2\modem_stats.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\modem_stats.h" />
 		<Unit filename="src\codec2\nlp.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\codec2\nlp.h" />
+		<Unit filename="src\codec2\noise_samples.h" />
+		<Unit filename="src\codec2\octave.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\octave.h" />
+		<Unit filename="src\codec2\os.h" />
+		<Unit filename="src\codec2\pack.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\codec2\phase.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\codec2\phase.h" />
+		<Unit filename="src\codec2\phaseexp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\codec2\phaseexp.h" />
+		<Unit filename="src\codec2\pilot_coeff.h" />
+		<Unit filename="src\codec2\pilots_coh.h" />
 		<Unit filename="src\codec2\postfilter.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\codec2\postfilter.h" />
-		<Unit filename="src\codec2\sine.c">
+		<Unit filename="src\codec2\quantise.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\codec2\quantise.h" />
+		<Unit filename="src\codec2\rn.h" />
+		<Unit filename="src\codec2\rn_coh.h" />
+		<Unit filename="src\codec2\rxdec_coeff.h" />
 		<Unit filename="src\codec2\sine.h" />
+		<Unit filename="src\codec2\ssbfilt_coeff.h" />
+		<Unit filename="src\codec2\test_bits.h" />
+		<Unit filename="src\codec2\test_bits_coh.h" />
 		<Unit filename="src\codec2\varicode.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\codec2\varicode.h" />
+		<Unit filename="src\codec2\varicode_table.h" />
 		<Unit filename="src\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\debugblinky.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\gdb_stdio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\iir_duc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\iir_tuner.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\morse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\sfx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\sine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\sm1000_leds_switches.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\sm1000_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\sounds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\stm32f4_adc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\stm32f4_dac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\stm32f4_machdep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\stm32f4_usb_vcp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sm1000\tone.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\startup_stm32f4xx.S">
@@ -291,6 +438,55 @@
 		<Unit filename="src\system_stm32f4xx.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\usb_conf\usb_bsp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usb_conf\usb_bsp.h" />
+		<Unit filename="src\usb_conf\usb_conf.h" />
+		<Unit filename="src\usb_conf\usbd_conf.h" />
+		<Unit filename="src\usb_conf\usbd_desc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usb_conf\usbd_desc.h" />
+		<Unit filename="src\usb_conf\usbd_usr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usb_lib\cdc\usbd_cdc_core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usb_lib\cdc\usbd_cdc_core.h" />
+		<Unit filename="src\usb_lib\cdc\usbd_cdc_vcp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usb_lib\cdc\usbd_cdc_vcp.h" />
+		<Unit filename="src\usb_lib\core\usbd_core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usb_lib\core\usbd_core.h" />
+		<Unit filename="src\usb_lib\core\usbd_def.h" />
+		<Unit filename="src\usb_lib\core\usbd_ioreq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usb_lib\core\usbd_ioreq.h" />
+		<Unit filename="src\usb_lib\core\usbd_req.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usb_lib\core\usbd_req.h" />
+		<Unit filename="src\usb_lib\core\usbd_usr.h" />
+		<Unit filename="src\usb_lib\otg\usb_core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usb_lib\otg\usb_core.h" />
+		<Unit filename="src\usb_lib\otg\usb_dcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usb_lib\otg\usb_dcd.h" />
+		<Unit filename="src\usb_lib\otg\usb_dcd_int.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usb_lib\otg\usb_dcd_int.h" />
+		<Unit filename="src\usb_lib\otg\usb_defines.h" />
+		<Unit filename="src\usb_lib\otg\usb_regs.h" />
 		<Unit filename="stm32f407vg_flash.ld" />
 		<Unit filename="stm32f407vg_sram.ld" />
 		<Extensions>
@@ -305,7 +501,7 @@
 			</DoxyBlocks>
 			<code_completion />
 			<debugger>
-				<target_debugging_settings target="Debug" active_interface="ST-link">
+				<target_debugging_settings target="Release" active_interface="ST-link">
 					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics" gdb_before_conn="" gdb_after_conn="">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
@@ -322,7 +518,7 @@
 						</family_options>
 					</debug_interface>
 				</target_debugging_settings>
-				<target_debugging_settings target="Release" active_interface="ST-link">
+				<target_debugging_settings target="Debug" active_interface="ST-link">
 					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics" gdb_before_conn="" gdb_after_conn="">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
