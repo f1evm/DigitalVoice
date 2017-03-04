@@ -548,17 +548,6 @@ Wire Wire Line
 Text GLabel 7150 2850 2    60   Input ~ 0
 SENSE
 $Comp
-L INDUCTOR L2
-U 1 1 58ADE464
-P 1950 3650
-F 0 "L2" V 1900 3650 50  0000 C CNN
-F 1 "27uH" V 2050 3650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" H 1950 3650 50  0001 C CNN
-F 3 "" H 1950 3650 50  0000 C CNN
-	1    1950 3650
-	0    -1   -1   0   
-$EndComp
-$Comp
 L C C8
 U 1 1 58ADE5CB
 P 2350 3900
@@ -569,26 +558,11 @@ F 3 "" H 2350 3900 50  0000 C CNN
 	1    2350 3900
 	1    0    0    -1  
 $EndComp
-$Comp
-L INDUCTOR L6
-U 1 1 58ADE610
-P 2750 3650
-F 0 "L6" V 2700 3650 50  0000 C CNN
-F 1 "10uH" V 2850 3650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" H 2750 3650 50  0001 C CNN
-F 3 "" H 2750 3650 50  0000 C CNN
-	1    2750 3650
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2250 3650 2450 3650
 Wire Wire Line
 	2350 3750 2350 3650
 Connection ~ 2350 3650
 Wire Wire Line
-	1650 3650 1550 3650
-Wire Wire Line
-	3050 3650 3150 3650
+	2250 3650 2450 3650
 Wire Wire Line
 	2350 4050 2350 4150
 $Comp
@@ -602,21 +576,10 @@ F 3 "" H 2350 4150 50  0000 C CNN
 	1    2350 4150
 	1    0    0    -1  
 $EndComp
-Text GLabel 1550 3650 0    60   Input ~ 0
+Text GLabel 2250 3650 0    60   Input ~ 0
 16V
-Text GLabel 3150 3650 2    60   Input ~ 0
+Text GLabel 2450 3650 2    60   Input ~ 0
 16V_FILT
-$Comp
-L INDUCTOR L3
-U 1 1 58ADEA7D
-P 1950 4550
-F 0 "L3" V 1900 4550 50  0000 C CNN
-F 1 "27uH" V 2050 4550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" H 1950 4550 50  0001 C CNN
-F 3 "" H 1950 4550 50  0000 C CNN
-	1    1950 4550
-	0    -1   -1   0   
-$EndComp
 $Comp
 L C C9
 U 1 1 58ADEA83
@@ -628,26 +591,11 @@ F 3 "" H 2350 4800 50  0000 C CNN
 	1    2350 4800
 	1    0    0    -1  
 $EndComp
-$Comp
-L INDUCTOR L7
-U 1 1 58ADEA89
-P 2750 4550
-F 0 "L7" V 2700 4550 50  0000 C CNN
-F 1 "10uH" V 2850 4550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" H 2750 4550 50  0001 C CNN
-F 3 "" H 2750 4550 50  0000 C CNN
-	1    2750 4550
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2250 4550 2450 4550
 Wire Wire Line
 	2350 4650 2350 4550
 Connection ~ 2350 4550
 Wire Wire Line
-	1650 4550 1550 4550
-Wire Wire Line
-	3050 4550 3150 4550
+	2250 4550 2450 4550
 Wire Wire Line
 	2350 4950 2350 5050
 $Comp
@@ -661,21 +609,10 @@ F 3 "" H 2350 5050 50  0000 C CNN
 	1    2350 5050
 	1    0    0    -1  
 $EndComp
-Text GLabel 1550 4550 0    60   Input ~ 0
+Text GLabel 2250 4550 0    60   Input ~ 0
 5V
-Text GLabel 3150 4550 2    60   Input ~ 0
+Text GLabel 2450 4550 2    60   Input ~ 0
 5V_FILT
-$Comp
-L INDUCTOR L4
-U 1 1 58ADEC3C
-P 1950 5450
-F 0 "L4" V 1900 5450 50  0000 C CNN
-F 1 "27uH" V 2050 5450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" H 1950 5450 50  0001 C CNN
-F 3 "" H 1950 5450 50  0000 C CNN
-	1    1950 5450
-	0    -1   -1   0   
-$EndComp
 $Comp
 L C C10
 U 1 1 58ADEC42
@@ -687,26 +624,11 @@ F 3 "" H 2350 5700 50  0000 C CNN
 	1    2350 5700
 	1    0    0    -1  
 $EndComp
-$Comp
-L INDUCTOR L8
-U 1 1 58ADEC48
-P 2750 5450
-F 0 "L8" V 2700 5450 50  0000 C CNN
-F 1 "10uH" V 2850 5450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" H 2750 5450 50  0001 C CNN
-F 3 "" H 2750 5450 50  0000 C CNN
-	1    2750 5450
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2250 5450 2450 5450
 Wire Wire Line
 	2350 5550 2350 5450
 Connection ~ 2350 5450
 Wire Wire Line
-	1650 5450 1550 5450
-Wire Wire Line
-	3050 5450 3150 5450
+	2250 5450 2450 5450
 Wire Wire Line
 	2350 5850 2350 5950
 $Comp
@@ -720,9 +642,9 @@ F 3 "" H 2350 5950 50  0000 C CNN
 	1    2350 5950
 	1    0    0    -1  
 $EndComp
-Text GLabel 1550 5450 0    60   Input ~ 0
+Text GLabel 2250 5450 0    60   Input ~ 0
 3V3
-Text GLabel 3150 5450 2    60   Input ~ 0
+Text GLabel 2450 5450 2    60   Input ~ 0
 3V3_FILT
 Wire Wire Line
 	10250 1100 10150 1100
