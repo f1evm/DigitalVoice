@@ -2,26 +2,25 @@
 
 // WiringPi Internal Parameters
 #define WIRINGPI_INIT_ERROR -1
-#define SPI_CH               0 
-#define SPI_SPEED_HZ         500000
+
 
 // ------------------------------------
 // Low level register access to AX5043
 // ------------------------------------
 
-// Sets a register to specified value
-// Returns the value in the register
-static uint32_t set_register(uint32_t register, uint32_t value);
-static uint32_t read_register(uint32_t register);
-
 // List of important registers
 #define FIFOSTAT
 #define PKSTSTOREFLAGS
 #define TRKFREQ
+#define PWRMODE
+#define AX5043_MODULATION
+#define AX5043_IFFREQ
+#define AX5043_RXPARAMSETS
+#define AX5043_TIMEGAIN0
 
 // list of important register values
 #define COMMIT
-#STFOFFS
+#define STFOFFS
 
 // ------------------------------------
 // The AX5043 has an internal fifo buffer,
@@ -78,20 +77,25 @@ int AX5043_init(AX5043_t* self)
         printf("Could not init");
     }
     
+    for(int i = 0; i < len(CONFIG_REGSTERS); i++)
+    {
+        
+    }
 }
 
 void AX5043_set_freq(AX5043_t* self)
 {
     set_powermode(self, POWER_STANDBY);
     wait_for_stable_PLL(self);
-    while(read_register(RINGSTART) == 1)
+    while(read_register(RINGSTART) == 1);
+    
 }
 
 void AX5043_transmit(AX5043_t* self, uint8_t* buffer, size_t len)
 {
     // Write data to the internal FIFO queue
     
-    tx_buffer_write(buffer, len);
+    fifo_write(buffer, len);
 }
 
 
@@ -113,5 +117,8 @@ void ISR_data_ready(void)
 
 static void autorange(AX5043_t* self)
 {
-    
+    set_powermode(self, POWER_STANDBY);
+    wait_for_stable_PLL(self);
+    while(read_register(RINGSTART) == 1);
+    set_powermode(self, POWER_DOWN);
 }

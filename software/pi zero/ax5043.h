@@ -1,5 +1,8 @@
 #inlcude <wiringPi.h>
 
+#define SPI_CH               0 
+#define SPI_SPEED_HZ         500000
+
 struct AX5043_t
 {
     
