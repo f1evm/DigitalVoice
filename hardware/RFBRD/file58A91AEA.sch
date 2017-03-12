@@ -309,4 +309,34 @@ Text GLabel 1350 950  0    60   Input ~ 0
 Connection ~ 4700 1700
 Text GLabel 4800 1700 2    60   Input ~ 0
 PREAMP_TX
+$Comp
+L CONN_01X02 P2
+U 1 1 58C4C605
+P 4200 900
+F 0 "P2" H 4200 1050 50  0000 C CNN
+F 1 "CONN_01X02" V 4300 900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 4200 900 50  0001 C CNN
+F 3 "" H 4200 900 50  0000 C CNN
+	1    4200 900 
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4400 850  4600 850 
+Wire Wire Line
+	4400 950  4500 950 
+Wire Wire Line
+	4500 950  4500 1050
+$Comp
+L GND #PWR029
+U 1 1 58C4C725
+P 4500 1050
+F 0 "#PWR029" H 4500 800 50  0001 C CNN
+F 1 "GND" H 4500 900 50  0000 C CNN
+F 2 "" H 4500 1050 50  0000 C CNN
+F 3 "" H 4500 1050 50  0000 C CNN
+	1    4500 1050
+	1    0    0    -1  
+$EndComp
+Text GLabel 4600 850  2    60   Input ~ 0
+5V
 $EndSCHEMATC
