@@ -1,13 +1,13 @@
 #include "ax5043.h"
 #include "ax5043_register_io.h"
 #include "ax5043_fifo.h"
-#include "register_settings.c" // Fuck it, we'll make it work
+#include "register_settings.h" 
 
 // For debugging
 #include <unistd.h>
 
 // Set up AX5043
-int AX5043_init(AX5043_t* self)
+void AX5043_init(AX5043_t* self)
 {
     // Set up the SPI bus
     printf("Turning on SPI bus: ");
@@ -41,7 +41,7 @@ void AX5043_transmit(AX5043_t* self, uint8_t* buffer, size_t len)
     set_tx_registers();
 
     // Write the transmit command
-    fifo_write_data(buffer, buffer, len);
+    fifo_write_data(self, buffer, len);
     ax5043_register_write(AX_REG_PWRMODE, AX5043_PWRSTATE_FULL_TX);
     printf("Data written\n");
 

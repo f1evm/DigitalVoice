@@ -1,4 +1,8 @@
 CFLAGS = -lwiringPi -std=c11
+CSRC = *.c
 
-reg_test: reg_test.c
-	gcc $(CFLAGS) reg_test.c 
+test_ax5043: $(CSRC)
+	gcc $(CFLAGS) *.c -o test_ax5043
+	
+clean:
+	rm test_ax5043
