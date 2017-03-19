@@ -28,8 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:RFT
-LIBS:RFBRD-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -474,7 +472,7 @@ Wire Wire Line
 Wire Wire Line
 	2350 2750 2250 2750
 Text GLabel 2250 2750 0    60   Input ~ 0
-RF_IN
+RX_IN
 Wire Wire Line
 	6000 2450 6000 2250
 Wire Wire Line
