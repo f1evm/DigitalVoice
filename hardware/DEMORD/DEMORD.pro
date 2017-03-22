@@ -1,4 +1,4 @@
-update=Mon 20 Mar 2017 03:43:09 PM CDT
+update=3/22/2017 1:16:35 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=/home/srtywf/Documents/RFBRD/RFT
+LibName31=RFT
