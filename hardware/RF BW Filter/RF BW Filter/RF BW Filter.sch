@@ -1,0 +1,230 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:RF BW Filter Library
+LIBS:RF BW Filter-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L L L1
+U 1 1 58DFC647
+P 2700 1950
+F 0 "L1" V 2650 1950 50  0000 C CNN
+F 1 "13uH" V 2775 1950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" H 2700 1950 50  0001 C CNN
+F 3 "" H 2700 1950 50  0000 C CNN
+	1    2700 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L L L2
+U 1 1 58DFC73A
+P 3450 1950
+F 0 "L2" V 3400 1950 50  0000 C CNN
+F 1 "13uH" V 3525 1950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" H 3450 1950 50  0001 C CNN
+F 3 "" H 3450 1950 50  0000 C CNN
+	1    3450 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C1
+U 1 1 58DFC76A
+P 2400 2300
+F 0 "C1" H 2425 2400 50  0000 L CNN
+F 1 "2000pF" H 2425 2200 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2438 2150 50  0001 C CNN
+F 3 "" H 2400 2300 50  0000 C CNN
+	1    2400 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 58DFC7A4
+P 3100 2300
+F 0 "C2" H 3125 2400 50  0000 L CNN
+F 1 "3600pF" H 3125 2200 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3138 2150 50  0001 C CNN
+F 3 "" H 3100 2300 50  0000 C CNN
+	1    3100 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 58DFC7D4
+P 3750 2300
+F 0 "C3" H 3775 2400 50  0000 L CNN
+F 1 "2000pF" H 3775 2200 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3788 2150 50  0001 C CNN
+F 3 "" H 3750 2300 50  0000 C CNN
+	1    3750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 58DFC84C
+P 2400 2650
+F 0 "#PWR01" H 2400 2400 50  0001 C CNN
+F 1 "GND" H 2400 2500 50  0000 C CNN
+F 2 "" H 2400 2650 50  0000 C CNN
+F 3 "" H 2400 2650 50  0000 C CNN
+	1    2400 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 58DFC86D
+P 3100 2650
+F 0 "#PWR02" H 3100 2400 50  0001 C CNN
+F 1 "GND" H 3100 2500 50  0000 C CNN
+F 2 "" H 3100 2650 50  0000 C CNN
+F 3 "" H 3100 2650 50  0000 C CNN
+	1    3100 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 58DFC887
+P 3750 2650
+F 0 "#PWR03" H 3750 2400 50  0001 C CNN
+F 1 "GND" H 3750 2500 50  0000 C CNN
+F 2 "" H 3750 2650 50  0000 C CNN
+F 3 "" H 3750 2650 50  0000 C CNN
+	1    3750 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L SMA_Edge_Mount U1
+U 1 1 58DFCCA7
+P 1650 1950
+F 0 "U1" H 1650 2150 60  0000 C CNN
+F 1 "SMA_Edge_Mount" H 1650 1750 60  0000 C CNN
+F 2 "RF BW Filter:SMA_Edge_Mount" H 1650 1950 60  0001 C CNN
+F 3 "" H 1650 1950 60  0001 C CNN
+	1    1650 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L SMA_Edge_Mount U2
+U 1 1 58DFCD56
+P 4550 1950
+F 0 "U2" H 4550 2150 60  0000 C CNN
+F 1 "SMA_Edge_Mount" H 4550 1750 60  0000 C CNN
+F 2 "RF BW Filter:SMA_Edge_Mount" H 4550 1950 60  0001 C CNN
+F 3 "" H 4550 1950 60  0001 C CNN
+	1    4550 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 58DFCDE2
+P 2150 2300
+F 0 "#PWR04" H 2150 2050 50  0001 C CNN
+F 1 "GND" H 2150 2150 50  0000 C CNN
+F 2 "" H 2150 2300 50  0000 C CNN
+F 3 "" H 2150 2300 50  0000 C CNN
+	1    2150 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 58DFCE5D
+P 2150 1700
+F 0 "#PWR06" H 2150 1450 50  0001 C CNN
+F 1 "GND" H 2150 1550 50  0000 C CNN
+F 2 "" H 2150 1700 50  0000 C CNN
+F 3 "" H 2150 1700 50  0000 C CNN
+	1    2150 1700
+	1    0    0    1   
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 58DFCE8C
+P 4050 2150
+F 0 "#PWR07" H 4050 1900 50  0001 C CNN
+F 1 "GND" H 4050 2000 50  0000 C CNN
+F 2 "" H 4050 2150 50  0000 C CNN
+F 3 "" H 4050 2150 50  0000 C CNN
+	1    4050 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1850 2150 1850
+Wire Wire Line
+	2150 1850 2150 1700
+Wire Wire Line
+	3900 1850 4150 1850
+Wire Wire Line
+	3600 1950 4150 1950
+Wire Wire Line
+	2050 1950 2550 1950
+Wire Wire Line
+	2050 2050 2150 2050
+Wire Wire Line
+	2150 2050 2150 2300
+Wire Wire Line
+	2400 2150 2400 1950
+Connection ~ 2400 1950
+Wire Wire Line
+	2400 2650 2400 2450
+Wire Wire Line
+	2850 1950 3300 1950
+Wire Wire Line
+	3100 2150 3100 1950
+Connection ~ 3100 1950
+Wire Wire Line
+	3100 2650 3100 2450
+Wire Wire Line
+	3750 2650 3750 2450
+Wire Wire Line
+	3750 2150 3750 1950
+Connection ~ 3750 1950
+Wire Wire Line
+	4150 2050 4050 2050
+Wire Wire Line
+	4050 2050 4050 2150
+Wire Wire Line
+	3900 1850 3900 1750
+Wire Wire Line
+	3900 1750 2150 1750
+Connection ~ 2150 1750
+$EndSCHEMATC
