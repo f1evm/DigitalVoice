@@ -1,4 +1,4 @@
-update=Fri 24 Mar 2017 06:15:00 PM CDT
+update=Sun 02 Apr 2017 03:20:26 PM CDT
 version=1
 last_client=kicad
 [cvpcb]
@@ -116,3 +116,4 @@ LibName30=contrib
 LibName31=valves
 LibName32=/home/srtywf/Documents/RFBRD/RFT
 LibName33=/home/srtywf/Documents/PWRBRD/PWR
+LibName34=/home/srtywf/Documents/GIT/DigitalVoice/hardware/RF BW Filter/RF BW Filter Libraries/RF BW Filter Library
