@@ -1,0 +1,456 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:RFT
+LIBS:RPi_Hat-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title ""
+Date "15 nov 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Si4464 U?
+U 1 1 58E9F2F9
+P 8600 3450
+F 0 "U?" H 9000 3000 60  0000 C CNN
+F 1 "Si4464" H 9050 3950 60  0000 C CNN
+F 2 "Housings_DFN_QFN:QFN-20-1EP_4x4mm_Pitch0.5mm" H 8600 3450 60  0001 C CNN
+F 3 "" H 8600 3450 60  0001 C CNN
+	1    8600 3450
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8400 2800
+NoConn ~ 8500 2800
+NoConn ~ 8700 4050
+NoConn ~ 8800 4050
+Wire Wire Line
+	8600 2400 8600 2800
+$Comp
+L GND #PWR?
+U 1 1 58E9F2FA
+P 8500 2500
+F 0 "#PWR?" H 8500 2250 50  0001 C CNN
+F 1 "GND" H 8500 2350 50  0000 C CNN
+F 2 "" H 8500 2500 50  0000 C CNN
+F 3 "" H 8500 2500 50  0000 C CNN
+	1    8500 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 2500 8500 2400
+Wire Wire Line
+	8500 2400 8600 2400
+Wire Wire Line
+	8700 1800 8700 2800
+Wire Wire Line
+	8800 2300 8800 2800
+NoConn ~ 8500 4050
+$Comp
+L +3V3 #PWR?
+U 1 1 58E9F2FD
+P 8000 4050
+F 0 "#PWR?" H 8000 3900 50  0001 C CNN
+F 1 "+3V3" H 8000 4190 50  0000 C CNN
+F 2 "" H 8000 4050 50  0000 C CNN
+F 3 "" H 8000 4050 50  0000 C CNN
+	1    8000 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4050 8000 4250
+Wire Wire Line
+	8600 4250 8600 4050
+Wire Wire Line
+	8400 4050 8400 4250
+Connection ~ 8400 4250
+Wire Wire Line
+	9250 3250 9350 3250
+Wire Wire Line
+	9250 3450 9350 3450
+Wire Wire Line
+	9250 3650 9350 3650
+Text GLabel 9350 3650 2    60   Input ~ 0
+nIRQ
+Text GLabel 9350 3250 2    60   Input ~ 0
+nSEL
+Text GLabel 9350 3450 2    60   Input ~ 0
+SDO
+Wire Wire Line
+	9250 3350 9750 3350
+Wire Wire Line
+	9250 3550 9750 3550
+Text GLabel 9750 3350 2    60   Input ~ 0
+SDI
+Text GLabel 9750 3550 2    60   Input ~ 0
+SCLK
+Wire Wire Line
+	7850 3250 7950 3250
+Wire Wire Line
+	7850 3250 7850 3050
+Wire Wire Line
+	7850 3050 7750 3050
+Text GLabel 7750 3050 0    60   Input ~ 0
+SHDN
+Wire Wire Line
+	7950 3550 7650 3550
+$Comp
+L C C?
+U 1 1 58E9F2FE
+P 7500 3550
+F 0 "C?" H 7525 3650 50  0000 L CNN
+F 1 "4.7pF" H 7525 3450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7538 3400 50  0001 C CNN
+F 3 "" H 7500 3550 50  0000 C CNN
+	1    7500 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7350 3550 7250 3550
+$Comp
+L L_Small L?
+U 1 1 58E9F2FF
+P 7750 3850
+F 0 "L?" H 7780 3890 50  0000 L CNN
+F 1 "36nH" H 7780 3810 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 7750 3850 50  0001 C CNN
+F 3 "" H 7750 3850 50  0000 C CNN
+	1    7750 3850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7750 3750 7750 3550
+Connection ~ 7750 3550
+Wire Wire Line
+	7750 3950 7750 4150
+Wire Wire Line
+	7750 4150 8000 4150
+Connection ~ 8000 4150
+$Comp
+L L_Small L?
+U 1 1 58E9F300
+P 7150 3550
+F 0 "L?" H 7180 3590 50  0000 L CNN
+F 1 "27nH" H 7180 3510 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 7150 3550 50  0001 C CNN
+F 3 "" H 7150 3550 50  0000 C CNN
+	1    7150 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3550 7050 3550
+Wire Wire Line
+	6950 3550 6950 3650
+Connection ~ 6950 3550
+$Comp
+L C C?
+U 1 1 58E9F301
+P 6950 3800
+F 0 "C?" H 6975 3900 50  0000 L CNN
+F 1 "12pF" H 6975 3700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 6988 3650 50  0001 C CNN
+F 3 "" H 6950 3800 50  0000 C CNN
+	1    6950 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L L_Small L?
+U 1 1 58E9F302
+P 6750 3550
+F 0 "L?" H 6780 3590 50  0000 L CNN
+F 1 "11nH" H 6780 3510 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 6750 3550 50  0001 C CNN
+F 3 "" H 6750 3550 50  0000 C CNN
+	1    6750 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 3550 6650 3550
+$Comp
+L C C?
+U 1 1 58E9F303
+P 6550 3800
+F 0 "C?" H 6575 3900 50  0000 L CNN
+F 1 "5.1pF" H 6575 3700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 6588 3650 50  0001 C CNN
+F 3 "" H 6550 3800 50  0000 C CNN
+	1    6550 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3650 6550 3550
+Connection ~ 6550 3550
+Wire Wire Line
+	6550 3950 6550 4050
+$Comp
+L GND #PWR?
+U 1 1 58E9F304
+P 6550 4050
+F 0 "#PWR?" H 6550 3800 50  0001 C CNN
+F 1 "GND" H 6550 3900 50  0000 C CNN
+F 2 "" H 6550 4050 50  0000 C CNN
+F 3 "" H 6550 4050 50  0000 C CNN
+	1    6550 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3950 6950 4050
+$Comp
+L GND #PWR?
+U 1 1 58E9F305
+P 6950 4050
+F 0 "#PWR?" H 6950 3800 50  0001 C CNN
+F 1 "GND" H 6950 3900 50  0000 C CNN
+F 2 "" H 6950 4050 50  0000 C CNN
+F 3 "" H 6950 4050 50  0000 C CNN
+	1    6950 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58E9F306
+P 6300 3550
+F 0 "C?" H 6325 3650 50  0000 L CNN
+F 1 "4.7pF" H 6325 3450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 6338 3400 50  0001 C CNN
+F 3 "" H 6300 3550 50  0000 C CNN
+	1    6300 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6150 3550 6050 3550
+Wire Wire Line
+	7950 3350 7750 3350
+Wire Wire Line
+	7750 3350 7750 3150
+Wire Wire Line
+	7750 3150 7400 3150
+Wire Wire Line
+	7950 3450 7650 3450
+Wire Wire Line
+	7650 3450 7650 3350
+Wire Wire Line
+	7650 3350 7150 3350
+$Comp
+L L_Small L?
+U 1 1 58E9F307
+P 7250 3150
+F 0 "L?" H 7280 3190 50  0000 L CNN
+F 1 "36nH" H 7280 3110 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 7250 3150 50  0001 C CNN
+F 3 "" H 7250 3150 50  0000 C CNN
+	1    7250 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7400 3150 7400 2950
+Wire Wire Line
+	7400 2950 7250 2950
+Wire Wire Line
+	7250 2850 7250 3050
+Wire Wire Line
+	7250 3350 7250 3250
+$Comp
+L C C?
+U 1 1 58E9F308
+P 7250 2700
+F 0 "C?" H 7275 2800 50  0000 L CNN
+F 1 "5.6pF" H 7275 2600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7288 2550 50  0001 C CNN
+F 3 "" H 7250 2700 50  0000 C CNN
+	1    7250 2700
+	1    0    0    -1  
+$EndComp
+Connection ~ 7250 2950
+$Comp
+L C C?
+U 1 1 58E9F309
+P 7000 3350
+F 0 "C?" H 7025 3450 50  0000 L CNN
+F 1 "4.7pF" H 7025 3250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7038 3200 50  0001 C CNN
+F 3 "" H 7000 3350 50  0000 C CNN
+	1    7000 3350
+	0    1    1    0   
+$EndComp
+Connection ~ 7250 3350
+Wire Wire Line
+	7250 2350 7250 2550
+$Comp
+L GND #PWR?
+U 1 1 58E9F30A
+P 7050 2450
+F 0 "#PWR?" H 7050 2200 50  0001 C CNN
+F 1 "GND" H 7050 2300 50  0000 C CNN
+F 2 "" H 7050 2450 50  0000 C CNN
+F 3 "" H 7050 2450 50  0000 C CNN
+	1    7050 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2450 7050 2350
+Wire Wire Line
+	7050 2350 7250 2350
+Wire Wire Line
+	6850 3350 6750 3350
+Text GLabel 6750 3350 0    60   Input ~ 0
+RXI
+Text GLabel 6050 3550 0    60   Input ~ 0
+TXO
+Text Notes 7350 7500 0    60   Italic 12
+Pi Hat Schematic
+Text Notes 7450 7250 0    60   ~ 0
+1 / 1
+Text Notes 10550 7650 0    60   ~ 12
+A
+$Comp
+L C C?
+U 1 1 58E9F33E
+P 8650 4500
+F 0 "C?" H 8675 4600 50  0000 L CNN
+F 1 "10nF" H 8675 4400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 8688 4350 50  0001 C CNN
+F 3 "" H 8650 4500 50  0000 C CNN
+	1    8650 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L C C?
+U 1 1 58E9F33F
+P 8350 4500
+F 0 "C?" H 8375 4600 50  0000 L CNN
+F 1 "10nF" H 8375 4400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 8388 4350 50  0001 C CNN
+F 3 "" H 8350 4500 50  0000 C CNN
+	1    8350 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58E9F340
+P 8500 4850
+F 0 "#PWR?" H 8500 4600 50  0001 C CNN
+F 1 "GND" H 8500 4700 50  0000 C CNN
+F 2 "" H 8500 4850 50  0000 C CNN
+F 3 "" H 8500 4850 50  0000 C CNN
+	1    8500 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Crystal Y?
+U 1 1 58E9FBD6
+P 8900 2050
+F 0 "Y?" H 8900 2200 50  0000 C CNN
+F 1 "30MHz" H 8900 1900 50  0000 C CNN
+F 2 "" H 8900 2050 50  0000 C CNN
+F 3 "" H 8900 2050 50  0000 C CNN
+	1    8900 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8800 2300 9100 2300
+Wire Wire Line
+	8900 2300 8900 2200
+Wire Wire Line
+	8700 1800 9100 1800
+Wire Wire Line
+	8900 1800 8900 1900
+Connection ~ 8900 1800
+Connection ~ 8900 2300
+$Comp
+L C C?
+U 1 1 58E9FE46
+P 9250 2300
+F 0 "C?" H 9275 2400 50  0000 L CNN
+F 1 "20pF" H 9275 2200 50  0000 L CNN
+F 2 "" H 9288 2150 50  0000 C CNN
+F 3 "" H 9250 2300 50  0000 C CNN
+	1    9250 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 58E9FE9C
+P 9250 1800
+F 0 "C?" H 9275 1900 50  0000 L CNN
+F 1 "20pF" H 9275 1700 50  0000 L CNN
+F 2 "" H 9288 1650 50  0000 C CNN
+F 3 "" H 9250 1800 50  0000 C CNN
+	1    9250 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9400 1800 9500 1800
+Wire Wire Line
+	9500 1800 9500 2400
+Wire Wire Line
+	9400 2300 9500 2300
+Connection ~ 9500 2300
+$Comp
+L GND #PWR?
+U 1 1 58E9FFE6
+P 9500 2400
+F 0 "#PWR?" H 9500 2150 50  0001 C CNN
+F 1 "GND" H 9500 2250 50  0000 C CNN
+F 2 "" H 9500 2400 50  0000 C CNN
+F 3 "" H 9500 2400 50  0000 C CNN
+	1    9500 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 4350 8350 4150
+Wire Wire Line
+	8350 4150 8400 4150
+Connection ~ 8400 4150
+Wire Wire Line
+	8650 4350 8650 4150
+Wire Wire Line
+	8650 4150 8600 4150
+Connection ~ 8600 4150
+Wire Wire Line
+	8000 4250 8600 4250
+Wire Wire Line
+	8350 4750 8650 4750
+Wire Wire Line
+	8650 4750 8650 4650
+Wire Wire Line
+	8350 4750 8350 4650
+Connection ~ 8500 4750
+Wire Wire Line
+	8500 4750 8500 4850
+$EndSCHEMATC

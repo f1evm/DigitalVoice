@@ -1,4 +1,4 @@
-update=03/28/2015 11:09:15 AM
+update=4/8/2017 5:29:00 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -24,6 +24,8 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=C:/xesscorp/KiCad/libraries
@@ -59,5 +61,4 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=xess
-[general]
-version=1
+LibName32=C:/Users/Mike/Documents/DigitalVoice/DigitalVoice/hardware/pihat2/RFT
