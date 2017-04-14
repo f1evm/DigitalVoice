@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:RPi_Hat-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -379,7 +380,7 @@ $EndComp
 Wire Wire Line
 	4350 1350 4350 1550
 $Comp
-L POT RV1
+L POT-RESCUE-RPi_Hat RV1
 U 1 1 58EECEFA
 P 4100 1350
 F 0 "RV1" H 4100 1270 50  0000 C CNN
