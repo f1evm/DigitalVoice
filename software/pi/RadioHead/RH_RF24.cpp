@@ -24,7 +24,8 @@ uint8_t RH_RF24::_interruptCount = 0; // Index into _deviceForInterrupt for next
 
 // This configuration data is defined in radio_config_Si4460.h 
 // which was generated with the Silicon Labs WDS program
-PROGMEM const uint8_t RF24_CONFIGURATION_DATA[] = RADIO_CONFIGURATION_DATA_ARRAY;
+//PROGMEM const uint8_t RF24_CONFIGURATION_DATA[] = RADIO_CONFIGURATION_DATA_ARRAY;
+const uint8_t RF24_CONFIGURATION_DATA[] = RADIO_CONFIGURATION_DATA_ARRAY;
 
 RH_RF24::RH_RF24(uint8_t slaveSelectPin, uint8_t interruptPin, uint8_t sdnPin, RHGenericSPI& spi)
     :
@@ -87,6 +88,7 @@ bool RH_RF24::init()
     // ON some devices, notably most Arduinos, the interrupt pin passed in is actuallt the 
     // interrupt number. You have to figure out the interruptnumber-to-interruptpin mapping
     // yourself based on knwledge of what Arduino board you are running on.
+    
     if (_myInterruptIndex == 0xff)
     {
 	// First run, no interrupt allocated yet
@@ -97,11 +99,11 @@ bool RH_RF24::init()
     }
     _deviceForInterrupt[_myInterruptIndex] = this;
     if (_myInterruptIndex == 0)
-	attachInterrupt(interruptNumber, isr0, FALLING);
+	wiringPiISR (_interruptPin, INT_EDGE_FALLING, isr0);
     else if (_myInterruptIndex == 1)
-	attachInterrupt(interruptNumber, isr1, FALLING);
+	wiringPiISR (_interruptPin, INT_EDGE_FALLING, isr1);
     else if (_myInterruptIndex == 2)
-	attachInterrupt(interruptNumber, isr2, FALLING);
+	wiringPiISR (_interruptPin, INT_EDGE_FALLING, isr2);
     else
 	return false; // Too many devices, not enough interrupt vectors
 
@@ -668,10 +670,10 @@ bool RH_RF24::configure(const uint8_t* commands)
     // <bytecount> <command> <bytecount-2 bytes of args/data>
     uint8_t next_cmd_len;
     
-    while (memcpy_P(&next_cmd_len, commands, 1), next_cmd_len > 0)
+    while (memcpy(&next_cmd_len, commands, 1), next_cmd_len > 0)
     {
 	uint8_t buf[20]; // As least big as the biggest permitted command/property list of 15
-	memcpy_P(buf, commands+1, next_cmd_len);
+	memcpy(buf, commands+1, next_cmd_len);
 	command(buf[0], buf+1, next_cmd_len - 1);
 	commands += (next_cmd_len + 1);
     }
@@ -1006,7 +1008,7 @@ bool RH_RF24::printRegisters()
     for (i = 0; i < NUM_COMMAND_INFO; i++)
     {
 	CommandInfo cmd;
-	memcpy_P(&cmd, &commands[i], sizeof(cmd));
+	memcpy(&cmd, &commands[i], sizeof(cmd));
 	uint8_t buf[10]; // Big enough for the biggest command reply
 	if (command(cmd.cmd, NULL, 0, buf, cmd.replyLen))
 	{
@@ -1028,11 +1030,11 @@ bool RH_RF24::printRegisters()
     for (i = 0; i < NUM_PROPERTIES; i++)
     {
 	uint16_t prop;
-	memcpy_P(&prop, &properties[i], sizeof(prop));
+	memcpy(&prop, &properties[i], sizeof(prop));
 	uint8_t result;
 	get_properties(prop, &result, 1);
 	Serial.print("prop: ");
-	Serial.print(prop, HEX);
+	Serial.print((unsigned char) prop, HEX);
 	Serial.print(": ");
 	Serial.print(result, HEX);
         Serial.println("");

@@ -16,14 +16,20 @@
 //Initialize the values for sanity
 timeval RHStartTime;
 
+// TODO:
+// I had to change up this section a bit to get it to work with 
+// wiringPi. Unfortunately wiringPi doesn't support changing the spi 
+// mode
 void SPIClass::begin()
 {
   //Set SPI Defaults
-  uint16_t divider = BCM2835_SPI_CLOCK_DIVIDER_256;
-  uint8_t bitorder = BCM2835_SPI_BIT_ORDER_MSBFIRST;
-  uint8_t datamode = BCM2835_SPI_MODE0;
+  //uint16_t divider = BCM2835_SPI_CLOCK_DIVIDER_256;
+  //uint8_t bitorder = BCM2835_SPI_BIT_ORDER_MSBFIRST;
+  //uint8_t datamode = BCM2835_SPI_MODE0;
 
-  begin(divider, bitorder, datamode);
+  //begin(divider, bitorder, datamode);
+  gettimeofday(&RHStartTime, NULL);
+  wiringPiSPISetupMode (0, 1000000, 0) ; // About 1 Mhz, equivalent to a clock divider of 256
 }
 
 void SPIClass::begin(uint16_t divider, uint8_t bitOrder, uint8_t dataMode)
@@ -33,85 +39,50 @@ void SPIClass::begin(uint16_t divider, uint8_t bitOrder, uint8_t dataMode)
   setDataMode(dataMode);
 
   //Set CS pins polarity to low
-  bcm2835_spi_setChipSelectPolarity(BCM2835_SPI_CS0, 0);
+  //bcm2835_spi_setChipSelectPolarity(BCM2835_SPI_CS0, 0);
 
-  bcm2835_spi_begin();
+  //bcm2835_spi_begin();
 
   //Initialize a timestamp for millis calculation
-  gettimeofday(&RHStartTime, NULL);
+  //gettimeofday(&RHStartTime, NULL);
 }
 
 void SPIClass::end()
 {
   //End the SPI
-  bcm2835_spi_end();
+  //WiringPi takes care of this for us on exit
+  //So we don't have to do anything
 }
 
 void SPIClass::setBitOrder(uint8_t bitOrder)
 {
+  
   //Set the SPI bit Order
-  bcm2835_spi_setBitOrder(bitOrder);
+  //bcm2835_spi_setBitOrder(bitOrder);
 }
 
 void SPIClass::setDataMode(uint8_t mode)
 {
+  wiringPiSPISetupMode (0, 1000000, mode);
   //Set SPI data mode
-  bcm2835_spi_setDataMode(mode);
+  //bcm2835_spi_setDataMode(mode);
 }
 
-void SPIClass::setClockDivider(uint16_t rate)
+void SPIClass::setClockDivider(unsigned short divider)
 {
-  //Set SPI clock divider
-  bcm2835_spi_setClockDivider(rate);
+	// No implementation because I don't know how to do this with
+	// wiringPi
 }
 
 byte SPIClass::transfer(byte _data)
 {
+  //Todo: Do I need to manually diddle the CS pin with WiringPi?
   //Set which CS pin to use for next transfers
-  bcm2835_spi_chipSelect(BCM2835_SPI_CS0);
+  //bcm2835_spi_chipSelect(BCM2835_SPI_CS0);
   //Transfer 1 byte
   byte data;
-  data = bcm2835_spi_transfer((uint8_t)_data);
+  data = wiringPiSPIDataRW(0, (uint8_t*) &data, 1); //Assume we'll always be on channel 0, 1 byte at a time
   return data;
-}
-
-void pinMode(unsigned char pin, unsigned char mode)
-{
-  if (mode == OUTPUT)
-  {
-    bcm2835_gpio_fsel(pin,BCM2835_GPIO_FSEL_OUTP);
-  }
-  else
-  {
-    bcm2835_gpio_fsel(pin,BCM2835_GPIO_FSEL_INPT);
-  }
-}
-
-void digitalWrite(unsigned char pin, unsigned char value)
-{
-  bcm2835_gpio_write(pin,value);
-}
-
-unsigned long millis()
-{
-  //Declare a variable to store current time
-  struct timeval RHCurrentTime;
-  //Get current time
-  gettimeofday(&RHCurrentTime,NULL);
-  //Calculate the difference between our start time and the end time
-  unsigned long difference = ((RHCurrentTime.tv_sec - RHStartTime.tv_sec) * 1000);
-  difference += ((RHCurrentTime.tv_usec - RHStartTime.tv_usec)/1000);
-  //Return the calculated value
-  return difference;
-}
-
-void delay (unsigned long ms)
-{
-  //Implement Delay function
-  struct timespec ts;
-  ts.tv_sec=0;
-  ts.tv_nsec=(ms * 1000);
-  nanosleep(&ts,&ts);
 }
 
 long random(long min, long max)

@@ -4,8 +4,8 @@
 # http://www.airspayce.com/mikem/bcm2835/
 
 CC            = g++
-CFLAGS        = -DRASPBERRY_PI -DBCM2835_NO_DELAY_COMPATIBILITY -L/usr/local/lib
-LIBS          = -lbcm2835 -lwiringPi
+CFLAGS        = -DRASPBERRY_PI -L/usr/local/lib
+LIBS          = -lwiringPi
 RADIOHEADBASE = ./RadioHead
 INCLUDE       = -I$(RADIOHEADBASE) \
                 -I/usr/local/include

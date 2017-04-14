@@ -7,7 +7,8 @@
 #ifndef RASPI_h
 #define RASPI_h
 
-#include <bcm2835.h>
+#include <wiringPi.h>
+#include <wiringPiSPI.h>
 
 #include <stdio.h>
 #include <string.h>
@@ -18,10 +19,6 @@ typedef unsigned char byte;
 
 #ifndef NULL
   #define NULL 0
-#endif
-
-#ifndef OUTPUT
-  #define OUTPUT BCM2835_GPIO_FSEL_OUTP
 #endif
 
 class SPIClass
@@ -61,14 +58,6 @@ class SerialSimulator
 extern SerialSimulator Serial;
 
 void RasPiSetup();
-
-void pinMode(unsigned char pin, unsigned char mode);
-
-void digitalWrite(unsigned char pin, unsigned char value);
-
-unsigned long millis();
-
-void delay (unsigned long delay);
 
 long random(long min, long max);
 

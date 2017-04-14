@@ -23,9 +23,14 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=0
-FILE_NAME_0=896;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FDigitalVoice%2Fsoftware%2Fpi%2FRasPiRH.cpp;0;4
-FILE_NAME_1=308;Make;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FDigitalVoice%2Fsoftware%2Fpi%2FMakefile;0;4
+current_page=2
+FILE_NAME_0=811;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FDigitalVoice%2Fsoftware%2Fpi%2FRasPiRH.cpp;0;4
+FILE_NAME_1=1351;Make;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FDigitalVoice%2Fsoftware%2Fpi%2FMakefile;0;4
+FILE_NAME_2=2687;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FDigitalVoice%2Fsoftware%2Fpi%2FRadioHead%2FRH_RF24.cpp;0;4
+FILE_NAME_3=0;C;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FDigitalVoice%2Fsoftware%2Fpi%2FRadioHead%2FRH_NRF24.h;0;4
+FILE_NAME_4=0;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FDigitalVoice%2Fsoftware%2Fpi%2FRadioHead%2FRH_NRF24.cpp;0;4
+FILE_NAME_5=0;C++;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FDigitalVoice%2Fsoftware%2Fpi%2FRadioHead%2FRHutil%2FRasPi.cpp;0;4
+FILE_NAME_6=0;C;0;EUTF-8;1;1;0;%2Fhome%2Fpi%2FDigitalVoice%2Fsoftware%2Fpi%2FRadioHead%2FRHutil%2FRasPi.h;0;4
 
 [VTE]
 last_dir=/home/pi/DigitalVoice/software/pi

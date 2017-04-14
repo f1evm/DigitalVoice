@@ -329,40 +329,41 @@ void RHHardwareSPI::begin()
      }
 
 #elif (RH_PLATFORM == RH_PLATFORM_RASPI) // Raspberry PI
+//TODO: Probably change all of this for wiringPi
   uint8_t dataMode;
   if (_dataMode == DataMode0)
-    dataMode = BCM2835_SPI_MODE0;
+    dataMode = 0;
   else if (_dataMode == DataMode1)
-    dataMode = BCM2835_SPI_MODE1;
+    dataMode = 1;
   else if (_dataMode == DataMode2)
-    dataMode = BCM2835_SPI_MODE2;
+    dataMode = 2;
   else if (_dataMode == DataMode3)
-    dataMode = BCM2835_SPI_MODE3;
+    dataMode = 3;
 
   uint8_t bitOrder;
   if (_bitOrder == BitOrderLSBFirst)
-    bitOrder = BCM2835_SPI_BIT_ORDER_LSBFIRST;
+    bitOrder = 0;
   else
-    bitOrder = BCM2835_SPI_BIT_ORDER_MSBFIRST;
+    bitOrder = 1;
 
   uint32_t divider;
   switch (_frequency)
   {
     case Frequency1MHz:
     default:
-      divider = BCM2835_SPI_CLOCK_DIVIDER_256;
+      divider = 0;
       break;
     case Frequency2MHz:
-      divider = BCM2835_SPI_CLOCK_DIVIDER_128;
+      divider = 1;
       break;
     case Frequency4MHz:
-      divider = BCM2835_SPI_CLOCK_DIVIDER_64;
+      divider = 2;
       break;
     case Frequency8MHz:
-      divider = BCM2835_SPI_CLOCK_DIVIDER_32;
+      divider = 3;
       break;
     case Frequency16MHz:
-      divider = BCM2835_SPI_CLOCK_DIVIDER_16;
+      divider = 4;
       break;
   }
   SPI.begin(divider, bitOrder, dataMode);
