@@ -29,6 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:RFT
 LIBS:RPi_Hat-cache
 EELAYER 25 0
 EELAYER END
@@ -189,10 +190,6 @@ Text GLabel 3800 2100 2    60   Input ~ 0
 nSEL
 Wire Wire Line
 	1200 2800 1800 2800
-Wire Wire Line
-	1800 2700 1600 2700
-Text GLabel 1600 2700 0    60   Input ~ 0
-SHDN
 Text GLabel 1200 2800 0    60   Input ~ 0
 nIRQ
 Wire Wire Line
