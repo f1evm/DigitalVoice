@@ -12,7 +12,14 @@
 void sig_handler(int sig);
 void printbuffer(uint8_t buff[], int len);
 
-RH_RF24 rf24;
+// Pin Mapping
+// Spi is assumed to be hardware SPI 0
+// Pin numbers are using the WiringPi pin map
+#define SLAVE_SELECT SS
+#define N_IRQ_PIN    25
+#define SHUTDOWN_PIN 24
+
+RH_RF24 rf24(SLAVE_SELECT, N_IRQ_PIN, SHUTDOWN_PIN);
 
 //Flag for Ctrl-C
 volatile sig_atomic_t flag = 0;
