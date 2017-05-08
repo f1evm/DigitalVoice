@@ -1,0 +1,7 @@
+# Generated Object Files
+bin/
+obj/
+
+# Embitz Temp Files
+*.elay
+*.depend
